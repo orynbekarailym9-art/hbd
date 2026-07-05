@@ -759,3 +759,78 @@ body{
         right:8px;
     }
 }
+
+/* ===== WISHLIST BUTTON ===== */
+
+.special-link{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    margin-top:25px;
+
+    background:var(--pink);
+    color:white;
+
+    text-decoration:none;
+
+    padding:16px 30px;
+
+    border-radius:999px;
+
+    font-size:18px;
+    font-weight:600;
+
+    transition:.35s ease;
+
+    box-shadow:
+    0 10px 25px rgba(221,107,125,.25);
+
+    position:relative;
+    overflow:hidden;
+}
+
+.special-link::before{
+    content:"";
+
+    position:absolute;
+    top:0;
+    left:-120%;
+
+    width:100%;
+    height:100%;
+
+    background:
+    linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,.45),
+        transparent
+    );
+
+    transition:.8s;
+}
+
+.special-link:hover{
+    transform:translateY(-4px);
+    box-shadow:
+    0 18px 35px rgba(221,107,125,.35);
+}
+
+.special-link:hover::before{
+    left:120%;
+}
+
+.special-link:active{
+    transform:scale(.98);
+}
+
+@media(max-width:768px){
+
+    .special-link{
+        width:100%;
+        font-size:16px;
+        padding:15px 20px;
+    }
+
+}
